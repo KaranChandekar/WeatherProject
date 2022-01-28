@@ -9,8 +9,10 @@ app.get("/", function (req, res) {
 
   https.get(url, function (response) {
     console.log(response.statusCode);
+
     response.on("data", function (data) {
-      console.log(data);
+      const weatherData = JSON.parse(data);
+      console.log(weatherData);
     });
   });
 
