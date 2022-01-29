@@ -18,7 +18,9 @@ app.get("/", function (req, res) {
       const imgUrl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
       res.write("<p>The weather is currently " + weatherDescription + "<p>");
-      res.write("<h1>The temperature in London is " + temp + " degree Celcius.</h1>");
+      res.write("<h1>The temperature in London is " + temp + "&#176" + " Celcius.</h1>");
+      res.write(`<img src="` + imgUrl + `">`);
+
       res.send();
     });
   });
