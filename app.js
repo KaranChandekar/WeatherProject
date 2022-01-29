@@ -12,12 +12,11 @@ app.get("/", function (req, res) {
 
     response.on("data", function (data) {
       const weatherData = JSON.parse(data);
-      const temp = weatherData.weather[0].description;
-      console.log(temp);
+      const temp = weatherData.main.temp;
+      const weatherDescription = weatherData.weather[0].description;
+      res.send("<h1>The temperature in Nagpur is " + temp + " degree Celcius.</h1>");
     });
   });
-
-  res.send("Server is up and running.");
 });
 
 app.listen(3000, function () {
