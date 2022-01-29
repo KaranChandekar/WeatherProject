@@ -30,7 +30,7 @@ app.post("/", function(req, res) {
 
     res.write("<p>The weather is currently " + weatherDescription + "<p>");
     res.write("<h1>The temperature in " + query + " is " + temp + "&#176" + " Celcius.</h1>");
-    res.write(`<img src="` + imgUrl + `">`);
+    res.write("<img src=" + imgUrl + ">");
 
     res.send();
   });
