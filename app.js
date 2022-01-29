@@ -7,6 +7,9 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
+app.post("/", function(req, res) {
+  console.log("Post request recieved!");
+})
 
 // const query = "London";
 // const apiKey = "59c81e0f9698c05cf5739452f34babb9";
