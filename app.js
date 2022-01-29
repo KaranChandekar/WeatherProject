@@ -7,7 +7,8 @@ app.get("/", function (req, res) {
 
   const query = "London";
   const apiKey = "59c81e0f9698c05cf5739452f34babb9";
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=metric";
+  const unit = "metric";
+  const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=" + unit;
 
   https.get(url, function (response) {
     console.log(response.statusCode);
